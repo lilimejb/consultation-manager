@@ -44,7 +44,7 @@
 </string>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="main_page">
        <widget class="QPushButton" name="go_admin_page">
@@ -263,9 +263,12 @@
         <item row="0" column="0">
          <layout class="QFormLayout" name="formLayout_2">
           <item row="0" column="1">
-           <widget class="QTableView" name="person_info">
-            <property name="styleSheet">
-             <string notr="true"/>
+           <widget class="QTextBrowser" name="teacher_info">
+            <property name="font">
+             <font>
+              <family>Calibri</family>
+              <pointsize>14</pointsize>
+             </font>
             </property>
            </widget>
           </item>
@@ -310,18 +313,9 @@
            </widget>
           </item>
           <item row="1" column="1">
-           <widget class="QPushButton" name="choose_teacher">
-            <property name="font">
-             <font>
-              <family>Arial</family>
-              <weight>75</weight>
-              <bold>true</bold>
-              <underline>false</underline>
-              <strikeout>false</strikeout>
-             </font>
-            </property>
+           <widget class="QComboBox" name="choose_teacher">
             <property name="styleSheet">
-             <string notr="true">#reg_button{
+             <string notr="true">#choose_teacher{
 	background:linear-gradient(to bottom, #62c1e0 5%, #019ad2 100%);
 	background-color:#B2FFD6;
 	border-radius:6px;
@@ -333,18 +327,15 @@
 	padding:6px 6px;
 	text-decoration:none;
 }
-#reg_button:hover {
+#choose_teacher:hover {
 	background:linear-gradient(to bottom, #019ad2 5%, #62c1e0 100%);
 	background-color:#B4D6D3;
 }
-#reg_button:active {
+#choose_teacher:active {
 	position:relative;
 	top:1px;
 }
 </string>
-            </property>
-            <property name="text">
-             <string>Кто вы?</string>
             </property>
            </widget>
           </item>
@@ -354,27 +345,17 @@
       </widget>
       <widget class="QWidget" name="student_page">
        <layout class="QGridLayout" name="gridLayout_2">
-        <item row="0" column="0">
+        <item row="0" column="1">
          <layout class="QGridLayout" name="gridLayout_6">
           <item row="0" column="0">
            <layout class="QFormLayout" name="formLayout_3">
             <property name="rowWrapPolicy">
              <enum>QFormLayout::DontWrapRows</enum>
             </property>
-            <item row="1" column="0">
-             <widget class="QComboBox" name="teacher_choose">
-              <property name="font">
-               <font>
-                <family>Arial</family>
-                <pointsize>-1</pointsize>
-                <weight>75</weight>
-                <bold>true</bold>
-                <underline>false</underline>
-                <strikeout>false</strikeout>
-               </font>
-              </property>
+            <item row="0" column="0">
+             <widget class="QComboBox" name="subject_choose">
               <property name="styleSheet">
-               <string notr="true">#rest_choose{
+               <string notr="true">#subject_choose{
 	background:linear-gradient(to bottom, #62c1e0 5%, #019ad2 100%);
 	background-color:#B2FFD6;
 	border-radius:6px;
@@ -386,36 +367,28 @@
 	padding:6px 6px;
 	text-decoration:none;
 }
-#rest_choose:hover {
+#subject_choose:hover {
 	background:linear-gradient(to bottom, #019ad2 5%, #62c1e0 100%);
 	background-color:#B4D6D3;
 }
-#rest_choose:active {
+#subject_choose:active {
 	position:relative;
 	top:1px;
-}
-</string>
+}</string>
               </property>
-              <item>
-               <property name="text">
-                <string/>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>McDonald`s</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>KFC</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>Burger King</string>
-               </property>
-              </item>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QLabel" name="label">
+              <property name="font">
+               <font>
+                <family>Calibri</family>
+                <pointsize>14</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Выбор предмета</string>
+              </property>
              </widget>
             </item>
             <item row="1" column="1">
@@ -429,63 +402,6 @@
               <property name="text">
                <string>Выбор учителя</string>
               </property>
-             </widget>
-            </item>
-            <item row="2" column="0">
-             <widget class="QComboBox" name="date_choose">
-              <property name="font">
-               <font>
-                <family>Arial</family>
-                <pointsize>-1</pointsize>
-                <weight>75</weight>
-                <bold>true</bold>
-                <underline>false</underline>
-                <strikeout>false</strikeout>
-               </font>
-              </property>
-              <property name="styleSheet">
-               <string notr="true">#category_choose{
-	background:linear-gradient(to bottom, #62c1e0 5%, #019ad2 100%);
-	background-color:#B2FFD6;
-	border-radius:6px;
-	border:1px solid #057fd0;
-	color:#AA78A6;
-	font-family:Arial;
-	font-size:15px;
-	font-weight:bold;
-	padding:6px 6px;
-	text-decoration:none;
-}
-#category_choose:hover {
-	background:linear-gradient(to bottom, #019ad2 5%, #62c1e0 100%);
-	background-color:#B4D6D3;
-}
-#category_choose:active {
-	position:relative;
-	top:1px;
-}
-</string>
-              </property>
-              <item>
-               <property name="text">
-                <string/>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>Бургер</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>Закуска</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>Напиток</string>
-               </property>
-              </item>
              </widget>
             </item>
             <item row="2" column="1">
@@ -527,14 +443,14 @@
               </property>
              </widget>
             </item>
-            <item row="4" column="1">
+            <item row="5" column="1">
              <layout class="QHBoxLayout" name="horizontalLayout">
               <item>
-               <widget class="QTextBrowser" name="teachers">
+               <widget class="QTextBrowser" name="order_info">
                 <property name="font">
                  <font>
                   <family>Calibri</family>
-                  <pointsize>14</pointsize>
+                  <pointsize>28</pointsize>
                  </font>
                 </property>
                 <property name="styleSheet">
@@ -542,19 +458,9 @@
                 </property>
                </widget>
               </item>
-              <item>
-               <widget class="QTextBrowser" name="available_dates">
-                <property name="font">
-                 <font>
-                  <family>Calibri</family>
-                  <pointsize>14</pointsize>
-                 </font>
-                </property>
-               </widget>
-              </item>
              </layout>
             </item>
-            <item row="5" column="0">
+            <item row="6" column="0">
              <widget class="QPushButton" name="go_home_2">
               <property name="font">
                <font>
@@ -594,7 +500,7 @@
               </property>
              </widget>
             </item>
-            <item row="5" column="1">
+            <item row="6" column="1">
              <widget class="QPushButton" name="create_order">
               <property name="font">
                <font>
@@ -637,10 +543,10 @@
               </property>
              </widget>
             </item>
-            <item row="0" column="0">
-             <widget class="QComboBox" name="subject_choose">
+            <item row="1" column="0">
+             <widget class="QComboBox" name="teacher_choose">
               <property name="styleSheet">
-               <string notr="true">#subject_choose{
+               <string notr="true">#teacher_choose{
 	background:linear-gradient(to bottom, #62c1e0 5%, #019ad2 100%);
 	background-color:#B2FFD6;
 	border-radius:6px;
@@ -652,19 +558,45 @@
 	padding:6px 6px;
 	text-decoration:none;
 }
-#subject_choose:hover {
+#teacher_choose:hover {
 	background:linear-gradient(to bottom, #019ad2 5%, #62c1e0 100%);
 	background-color:#B4D6D3;
 }
-#subject_choose:active {
+#teacher_choose:active {
 	position:relative;
 	top:1px;
 }</string>
               </property>
              </widget>
             </item>
-            <item row="0" column="1">
-             <widget class="QLabel" name="label">
+            <item row="2" column="0">
+             <widget class="QComboBox" name="date_choose">
+              <property name="styleSheet">
+               <string notr="true">#date_choose{
+	background:linear-gradient(to bottom, #62c1e0 5%, #019ad2 100%);
+	background-color:#B2FFD6;
+	border-radius:6px;
+	border:1px solid #057fd0;
+	color:#AA78A6;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 6px;
+	text-decoration:none;
+}
+#date_choose:hover {
+	background:linear-gradient(to bottom, #019ad2 5%, #62c1e0 100%);
+	background-color:#B4D6D3;
+}
+#date_choose:active {
+	position:relative;
+	top:1px;
+}</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="1">
+             <widget class="QLineEdit" name="name_inter">
               <property name="font">
                <font>
                 <family>Calibri</family>
@@ -672,7 +604,20 @@
                </font>
               </property>
               <property name="text">
-               <string>Выбор предмета</string>
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="0">
+             <widget class="QLabel" name="label_2">
+              <property name="font">
+               <font>
+                <family>Calibri</family>
+                <pointsize>14</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Введите своё имя</string>
               </property>
              </widget>
             </item>

@@ -12,4 +12,5 @@ class Teacher(SqlAlchemyBase):
                            primary_key=True, autoincrement=True)
     name = sqlalchemy.Column(sqlalchemy.String, nullable=True)
     available_dates = sqlalchemy.Column(sqlalchemy.String, nullable=True)
-    student = orm.relation("Teacher", back_populates='teacher')
+    subjects = sqlalchemy.Column(sqlalchemy.String, nullable=True)
+    # student = orm.relation("Teacher", back_populates='teacher')
